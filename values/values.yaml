@@ -1,0 +1,6 @@
+spec:
+  template:
+    metadata:
+      annotations:
+        traffic.sidecar.istio.io/excludeInboundPorts: "9443"
+        traffic.sidecar.istio.io/includeInboundPorts: '*'

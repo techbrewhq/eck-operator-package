@@ -1,0 +1,14 @@
+apiVersion: uds.dev/v1alpha1
+kind: Package
+metadata:
+  name: eck-operator
+  namespace: elastic-system
+spec:
+  network:
+    allow:
+      # Permit intra-namespace communication
+      - direction: Ingress
+        remoteGenerated: Anywhere
+
+      - direction: Egress
+        remoteGenerated: Anywhere
